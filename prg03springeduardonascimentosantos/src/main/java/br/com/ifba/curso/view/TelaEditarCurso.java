@@ -4,18 +4,20 @@
  */
 package br.com.ifba.curso.view;
 
+import br.com.ifba.curso.controller.CursoIController;
 import br.com.ifba.curso.dao.CursoDao;
 import br.com.ifba.curso.dao.CursoIDao;
 import br.com.ifba.curso.entity.Curso;
 import javax.swing.JOptionPane;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 /**
  *
  * @author eduardo
  */
-@Controller
+@Component
 public class TelaEditarCurso extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaEditarCurso.class.getName());
@@ -26,7 +28,7 @@ public class TelaEditarCurso extends javax.swing.JFrame {
     private Long idCursoEmEdicao;
     
     @Autowired // <-- O Spring traz o Controller pronto!
-    private br.com.ifba.curso.controller.CursoController cursoController;
+    private CursoIController cursoController;
     
     public TelaEditarCurso() {
         initComponents();

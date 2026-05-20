@@ -5,6 +5,7 @@
 package br.com.ifba.curso.view;
 
 import br.com.ifba.curso.controller.CursoController;
+import br.com.ifba.curso.controller.CursoIController;
 import br.com.ifba.curso.dao.CursoDao;
 import br.com.ifba.curso.dao.CursoIDao;
 import br.com.ifba.curso.entity.Curso;
@@ -15,19 +16,20 @@ import jakarta.persistence.Persistence;
 import java.util.List;
 import javax.swing.JOptionPane;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 /**
  *
  * @author eduardo
  */
-@Controller
+@Component
 public class CursoListar extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CursoListar.class.getName());
 
     @Autowired 
-    private CursoController controller;
+    private CursoIController controller;
     
 
     @Autowired 

@@ -5,16 +5,18 @@
 package br.com.ifba.curso.view;
 
 import br.com.ifba.curso.controller.CursoController;
+import br.com.ifba.curso.controller.CursoIController;
 import br.com.ifba.curso.entity.Curso;
 import javax.swing.JOptionPane;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 /**
  *
  * @author eduardo
  */
-@Controller
+@Component
 public class TelaCadastroCurso extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaCadastroCurso.class.getName());
@@ -25,7 +27,7 @@ public class TelaCadastroCurso extends javax.swing.JFrame {
     private CursoListar telaPrincipal;
     
     @Autowired 
-    private br.com.ifba.curso.controller.CursoController cursoController;
+    private CursoIController cursoController;
     
     public TelaCadastroCurso() {
         initComponents();
