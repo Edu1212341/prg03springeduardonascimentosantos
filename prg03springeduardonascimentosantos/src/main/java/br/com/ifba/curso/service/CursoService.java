@@ -4,9 +4,8 @@
  */
 package br.com.ifba.curso.service;
 
-import br.com.ifba.curso.dao.CursoDao;
-import br.com.ifba.curso.dao.CursoIDao;
 import br.com.ifba.curso.entity.Curso;
+import br.com.ifba.curso.repository.CursoRepository;
 import br.com.ifba.infraestructure.util.StringUtil;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,33 +18,33 @@ import org.springframework.stereotype.Service;
 @Service
 public class CursoService implements CursoIService{
     @Autowired
-    private CursoIDao cursoDao;
+    private CursoRepository cursoRepository;
 
     @Override
     public Curso save(Curso curso) {
         validarCurso(curso); // Chama a validação antes de salvar
-        return cursoDao.save(curso);
+        return cursoRepository.save(curso);
     }
 
     @Override
     public Curso update(Curso curso) {
         validarCurso(curso);
-        return cursoDao.update(curso);
+        return cursoRepository.save(curso);//O bixo e inteligente, o save funciona como um UPDATE
     }
 
     @Override
     public void delete(Curso curso) {
-        cursoDao.delete(curso);
+        cursoRepository.delete(curso);
     }
 
     @Override
     public List<Curso> findAll() {
-        return cursoDao.findAll();
+        return cursoRepository.findAll();
     }
 
     @Override
     public Curso findById(Long id) {
-        return cursoDao.findById(id);
+        return cursoRepository.findById(id).orElse(null);//ele tenta pegar por ID, se nao tiver vai null. nao é bom usar o .get
     }
 
     
