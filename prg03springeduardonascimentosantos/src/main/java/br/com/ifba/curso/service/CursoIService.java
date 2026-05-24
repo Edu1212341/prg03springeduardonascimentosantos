@@ -12,9 +12,9 @@ import java.util.List;
  * @author eduardo
  */
 public interface CursoIService {
-    Curso save(Curso curso);
-    Curso update(Curso curso);
-    void delete(Curso curso);
-    List<Curso> findAll();
-    Curso findById(Long id);
+    Curso save(Curso curso);  //salva
+    Curso update(Curso curso);//atualiza
+    void delete(Curso curso);//apaga
+    List<Curso> findAll();//busca
+    Curso findById(Long id);//busca por id
 }
