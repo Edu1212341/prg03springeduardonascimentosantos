@@ -17,4 +17,3 @@ import org.springframework.stereotype.Repository;
 public interface CursoRepository extends JpaRepository<Curso, Long>{//Subistituto das DAO
     //A minha "Telinha" Busca por ID ao apertar pesquisar, e nao por nome
 }
-ã
