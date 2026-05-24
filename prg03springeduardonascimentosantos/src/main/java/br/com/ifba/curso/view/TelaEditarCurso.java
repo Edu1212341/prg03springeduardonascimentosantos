@@ -5,13 +5,10 @@
 package br.com.ifba.curso.view;
 
 import br.com.ifba.curso.controller.CursoIController;
-import br.com.ifba.curso.dao.CursoDao;
-import br.com.ifba.curso.dao.CursoIDao;
 import br.com.ifba.curso.entity.Curso;
 import javax.swing.JOptionPane;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 /**
  *

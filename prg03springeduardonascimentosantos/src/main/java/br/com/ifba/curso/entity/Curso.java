@@ -19,6 +19,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.io.Serializable;
+import java.util.Objects;
 /**
  *
  * @author eduardo
@@ -72,5 +73,7 @@ public class Curso extends PersistenceEntity implements Serializable{
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
+    
+    
 
 }
